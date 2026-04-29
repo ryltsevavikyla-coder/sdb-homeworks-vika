@@ -117,7 +117,40 @@ ACID-транзакции — гарантируют, что данные либ
 
 3. [ELK](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/11-03.md).
 
-4. [Очереди RabbitMQ](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/11-04.md).
+ 
+ # Домашнее задание к занятию «ELK»
+
+# Задание 1. Elasticsearch
+
+Установила Elasticsearch через Docker Compose.  
+Изменила `cluster.name` на `vika-elk-test-cluster`.
+
+![Elasticsearch Health](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-04-29%20123706.png)
+
+# Задание 2. Kibana
+
+Установила и запустила Kibana.  
+Выполнила запрос в Dev Tools.
+
+![Kibana Dev Tools](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-04-29%20131327.png)
+
+
+# Задание 3. Logstash + Nginx
+
+Установила Nginx.  
+Настроила передачу логов Nginx в Elasticsearch **через Filebeat** (Logstash нестабильно работал в Docker.Логи не хотели отображаться в dev tools).
+
+![Nginx logs via Filebeat](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-04-29%20172044.png)
+
+# Задание 4. Filebeat
+
+Переключила доставку логов Nginx на Filebeat (как требовалось в задании).
+
+![Nginx logs via Filebeat](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-04-29%20173008.png)
+
+ 
+
+5. [Очереди RabbitMQ](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/11-04.md).
 
 
 ## Модуль «Реляционные базы данных и администрирование баз данных»
