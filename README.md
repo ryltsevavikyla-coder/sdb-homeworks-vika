@@ -159,6 +159,55 @@ ACID-транзакции — гарантируют, что данные либ
 
 2. [Работа с данными (DDL/DML)](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-02.md).
 
+# Домашнее задание к занятию «Работа с данными (DDL/DML)»
+
+# Задание 1
+## 1.1 
+MySQL 8.0 запущен в Docker-контейнере.
+## 1.2–1.3. Создан пользователь `sys_temp` и получен список пользователей.
+
+```sql
+CREATE USER 'sys_temp'@'%' IDENTIFIED BY 'password';
+
+SELECT user, host, plugin 
+FROM mysql.user 
+ORDER BY user;
+```
+![1](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-08%20131733.png)
+
+# 1.4–1.5. Выданы все права пользователю и проверены GRANTS.
+```
+SQLGRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+SHOW GRANTS FOR 'sys_temp'@'%';
+```
+![1.4](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-08%20132719.png)
+
+## 1.6. Смена типа аутентификации:
+```
+SQLALTER USER 'sys_temp'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES;
+```
+## 1.7. Скачана и восстановлена база данных Sakila.
+## 1.8. Получен список таблиц базы sakila.
+```
+SQLUSE sakila;
+SHOW TABLES;
+```
+![1.8](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-08%20133317.png)
+
+
+
+
+
+
+
+
+
+
+
+
 3. [SQL. Часть 1](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-03.md).
 
 4. [SQL. Часть 2](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-04.md).
