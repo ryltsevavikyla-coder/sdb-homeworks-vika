@@ -197,8 +197,9 @@ SHOW TABLES;
 ```
 ![1.8](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-08%20133317.png)
 
+# Задание 2
 
-
+![2](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-08%20134911.png)
 
 
 
