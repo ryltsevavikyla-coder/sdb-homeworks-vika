@@ -56,6 +56,42 @@ Master — единая точка отказа для записи.
 
 # Задание 2
 
+## 1. Схема стенда
+
+- **Master** — Ubuntu 24.04 (`192.168.1.45`, MySQL 8.0.45)  
+- **Slave** — Debian (`192.168.1.44`, MariaDB)
+
+
+## 2. Настройка Master (Ubuntu)
+
+**Основные изменения в конфигурации:**
+- `bind-address = 0.0.0.0`
+
+**Статус Master:**
+
+![SHOW MASTER STATUS](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20151226.png)
+
+---
+
+## 3. Настройка Slave (Debian)
+
+**Конфигурация Slave** (`/etc/mysql/mariadb.conf.d/99-replication.cnf`):
+
+[mysqld]
+server-id = 2
+bind-address = 0.0.0.0
+Статус репликации:
+
+![2](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20151532.png)
+
+## 4. Тестирование репликации
+
+На Slave проверка баз данных:
+![3](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20151756.png)
+
+Данные успешно реплицировались:
+![4](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20151837.png)
+
 
 
 
