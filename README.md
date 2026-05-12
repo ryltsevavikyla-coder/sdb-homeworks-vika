@@ -12,9 +12,44 @@
 # SQL. Часть 1
 # Задание 1
 
+```
+SELECT DISTINCT district 
+FROM address 
+WHERE district LIKE 'K%a' 
+  AND district NOT LIKE '% %';
+```
+![1](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20125530.png)
+# Задание 2
 
+```
+SELECT * 
+FROM payment 
+WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18 23:59:59' 
+  AND amount > 10.00;
+```
+![2](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20125702.png)
+# Задание 3
+```
+SELECT * 
+FROM rental 
+ORDER BY rental_date DESC 
+LIMIT 5;
+```
 
+![3](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20125845.png)
+# Задание 4
+```
+SELECT 
+    LOWER(first_name) AS first_name_lower,
+    LOWER(last_name) AS last_name_lower,
+    REPLACE(LOWER(first_name), 'll', 'pp') AS first_name_modified,
+    REPLACE(LOWER(last_name), 'll', 'pp') AS last_name_modified
+FROM customer
+WHERE active = 1 
+  AND first_name IN ('Kelly', 'Willie');
+```
 
+![4](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-12%20125957.png)
 
 
 
