@@ -8,6 +8,23 @@
 
 Любые вопросы по решению задач задавайте в чате учебной группы, ссылку вы найдёте в письме на вашей электронной почте.
 
+3. [SQL. Часть 1](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-03.md).
+# SQL. Часть 1
+# Задание 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Модуль «Системы хранения и передачи данных
 
 1. [Базы данных, их типы](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/11-01.md).
@@ -209,7 +226,6 @@ SHOW TABLES;
 
 
 
-3. [SQL. Часть 1](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-03.md).
 
 4. [SQL. Часть 2](https://github.com/netology-code/sdb-homeworks/blob/sdbsql-22/12-04.md).
 
