@@ -47,7 +47,7 @@
 ![5](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150015.png)
 ![6](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150023.png)
 ### 4. UDP-сканирование
-![7](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150857.png)
+![7](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20154907.png)
 ![8](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20151720.png)
 
 **Чем отличаются режимы сканирования с точки зрения сетевого трафика?**
