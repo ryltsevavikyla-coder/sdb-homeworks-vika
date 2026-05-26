@@ -36,13 +36,32 @@
 ### Samba 3.x (usermap_script)
 ## Ссылка: https://www.exploit-db.com/exploits/42084
 
+# Задание 2
+### 1. SYN-сканирование
+![1](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20144258.png)
+![2](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20144442.png)
+### 2. FIN-сканирование
+![3](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20144858.png)
+![4](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20144907.png)
+### 3. Xmas-сканирование
+![5](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150015.png)
+![6](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150023.png)
+### 4. UDP-сканирование
+![7](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20150857.png)
+![8](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-26%20151720.png)
 
+**Чем отличаются режимы сканирования с точки зрения сетевого трафика?**
 
+- **SYN** — отправляет TCP-пакеты с флагом SYN (полуоткрытое соединение).
+- **FIN** — отправляет только FIN-флаг.
+- **Xmas** — отправляет пакеты с флагами FIN + PSH + URG («ёлочка»).
+- **UDP** — отправляет UDP-датаграммы.
 
+**Как отвечает сервер?**
 
-
-
-
+- **SYN**: открытый порт — SYN/ACK, закрытый — RST.
+- **FIN и Xmas**: открытый порт — молчание, закрытый — RST.
+- **UDP**: закрытый порт — ICMP Port Unreachable.
 
 
 
