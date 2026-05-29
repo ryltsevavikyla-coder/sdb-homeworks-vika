@@ -8,6 +8,48 @@
 
 Любые вопросы по решению задач задавайте в чате учебной группы, ссылку вы найдёте в письме на вашей электронной почте.
 
+# Домашнее задание к занятию «Защита сети»
+# Задание 1
+С машины злоумышленника была проведена разведка с помощью nmap.
+
+**Выполненные команды:**
+- `sudo nmap -sA 192.168.1.45`
+- `sudo nmap -sT 192.168.1.45`
+- `sudo nmap -sS 192.168.1.45`
+- `sudo nmap -sV 192.168.1.45`
+
+**Скриншот 1** — Результаты сканирования nmap:  
+![nmap scans](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20145732.png)
+
+**Результаты:** Открыты порты `22 (SSH)`, `8080 (nginx)`, `8088 (HAProxy)`, `9200 (Elasticsearch)`.
+
+**Скриншот 2** — Статус SSH-сервера:  
+![ssh status](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20141836.png)
+
+**Скриншот 3** — Статус Fail2Ban:  
+![fail2ban status](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20140507.png)
+
+**Вывод:** Разведка проведена успешно. Suricata и Fail2Ban на сканирование не отреагировали.
+
+## Задание 2: Атака подбором пароля (Brute Force)
+
+**Скриншот 1** — Создание словарей `users.txt` и `pass.txt`:  
+![users pass](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20144940.png)
+
+**Выполнена атака:**
+```bash
+hydra -L users.txt -P pass.txt -t 4 192.168.1.45 ssh
+```
+### Скриншот 2
+![attac](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20145018.png)
+
+### Скриншот 3 — Лог Fail2Ban (бан IP):
+![log](https://github.com/ryltsevavikyla-coder/sdb-homeworks-vika/blob/sdbsql-24/Screenshot%202026-05-29%20145512.png)
+
+### Вывод: Fail2Ban успешно сработал и заблокировал IP атакующего (192.168.1.44) после нескольких неудачных попыток входа.
+
+---
+
 # Домашнее задание к занятию «Уязвимости и атаки на информационные системы»
 # Задание 1
 ## Какие сетевые службы в ней разрешены?
